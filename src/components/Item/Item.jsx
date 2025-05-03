@@ -1,18 +1,18 @@
 import './Item.css';
+import { Link } from 'react-router-dom';
 
-function Item({producto,precio}) {
+function Item({ id, nombre, precio }) {
+  return (
+    <div className='cards'>
+      <h2>{nombre || "Sin stock"}</h2>
+      <p>Precio: ${precio || "Sin stock"}</p>
+      {nombre && (
+        <Link to={`/detalle/${id}`}>
+          <button className='boton'>Ver detalle</button>
+        </Link>
+      )}
+    </div>
+  );
+}
 
-    function encargar(){
-        console.log("Encargaste: ",producto)
-    }
-
-    return (
-          <div className='cards'>
-            <h2>{producto || "Sin stock"}</h2>
-            <p>Precio ${precio || "Sin stock" } </p>
-            <button disabled={!producto} className='boton' onClick={() => encargar()}> Encargar</button>
-          </div>
-    );
-};
-
-export default Item;    
+export default Item;
