@@ -22,6 +22,11 @@ function FinalizarCompra() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (!total || total <= 0 || isNaN(total)) {
+      alert("Error: el total es inválido.");
+      return;
+    }
+
     const orden = {
       comprador: formData,
       items: carrito,
@@ -33,8 +38,10 @@ function FinalizarCompra() {
       const ordenRef = await addDoc(collection(db, "ordenes"), orden);
       setOrdenId(ordenRef.id);
       vaciarCarrito();
+      alert("¡Orden confirmada!");
     } catch (error) {
       console.error("Error al generar la orden:", error);
+      alert("Hubo un error al generar la orden. Intenta nuevamente.");
     }
   };
 

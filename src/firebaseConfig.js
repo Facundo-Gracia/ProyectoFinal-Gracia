@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA...etc",
-  authDomain: "proyectopasteleria-...etc",
-  projectId: "proyectopasteleria-...etc",
-  storageBucket: "proyectopasteleria-...etc",
-  messagingSenderId: "1020724...etc",
-  appId: "1:1020724...etc"
+  apiKey: "AIzaSyA2G3Ux2Xdf3CrC4Z4hErBwDzH7QrJiCAM",
+  authDomain: "proyectopasteleria-ff2bc.firebaseapp.com",
+  projectId: "proyectopasteleria-ff2bc",
+  storageBucket: "proyectopasteleria-ff2bc.firebasestorage.app",
+  messagingSenderId: "102072245284",
+  appId: "1:102072245284:web:cc8111f0cbbf10be240cb1"
 };
 
 const app = initializeApp(firebaseConfig);

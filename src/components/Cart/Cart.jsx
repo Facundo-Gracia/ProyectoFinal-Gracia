@@ -1,3 +1,4 @@
+import './Cart.css';
 import { useContext, useState } from 'react';
 import { CartContext } from '../context/CartContext';
 import FinalizarCompra from "../FinalizarCompra/FinalizarCompra";

@@ -21,12 +21,18 @@ export function CartProvider({ children }) {
     }
   }
 
-  // Calcular total de unidades en el carrito
+  // Vaciar carrito
+  function vaciarCarrito() {
+    setCarrito([]);
+  }
+
+  // Calcular total de unidades y total en $
   const cantidadTotal = carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
+  const total = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0);
 
   // Valor que estará disponible en todos los componentes
   return (
-    <CartContext.Provider value={{ carrito, agregarAlCarrito, cantidadTotal }}>
+    <CartContext.Provider value={{ carrito, agregarAlCarrito, vaciarCarrito, cantidadTotal, total }}>
       {children}
     </CartContext.Provider>
   );

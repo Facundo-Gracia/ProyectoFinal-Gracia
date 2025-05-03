@@ -8,9 +8,13 @@ function CartWidget() {
 
   return (
     <div className="containerCart">
-      <Link to="/cart">
-        <p>({cantidadTotal})</p>
-        <img className="carrito" src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Carrito" />
+      <Link to="/cart" className="cart-link">
+        <img
+          className="carrito"
+          src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png"
+          alt="Carrito"
+        />
+        <span className="cart-count">({cantidadTotal})</span>
       </Link>
     </div>
   );
