@@ -1,9 +1,10 @@
-import { useContext } from 'react';
-import { CartContext } from '../../context/CartContext';
-import { Link } from 'react-router-dom';
+import { useContext, useState } from 'react';
+import { CartContext } from '../context/CartContext';
+import FinalizarCompra from "../FinalizarCompra/FinalizarCompra";
 
 function Cart() {
   const { carrito } = useContext(CartContext);
+  const [mostrarFormulario, setMostrarFormulario] = useState(false);
 
   const total = carrito.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0);
 
@@ -11,7 +12,7 @@ function Cart() {
     return (
       <div>
         <h2>Tu carrito está vacío</h2>
-        <Link to="/">Volver al catálogo</Link>
+        <button onClick={() => window.location.href = '/'}>Volver al catálogo</button>
       </div>
     );
   }
@@ -28,9 +29,12 @@ function Cart() {
         </div>
       ))}
       <h3>Total: ${total}</h3>
-      <Link to="/checkout">
-        <button>Finalizar compra</button>
-      </Link>
+
+      {!mostrarFormulario ? (
+        <button onClick={() => setMostrarFormulario(true)}>Finalizar compra</button>
+      ) : (
+        <FinalizarCompra />
+      )}
     </div>
   );
 }

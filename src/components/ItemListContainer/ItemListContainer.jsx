@@ -23,7 +23,7 @@ function ItemListContainer({ greetings }) {
       <h1>{greetings}</h1>
       <div className='container-cards'>
         {productos.map(prod => (
-          <Item key={prod.id} producto={prod.nombre} precio={prod.precio} id={prod.id} />
+          <Item key={prod.id} nombre={prod.nombre} precio={prod.precio} id={prod.id} />
         ))}
       </div>
     </>

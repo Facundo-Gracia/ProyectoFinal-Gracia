@@ -1,0 +1,50 @@
+.finalizar-compra-form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .finalizar-compra-form h2 {
+    color: #7b3f00;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .finalizar-compra-form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  .finalizar-compra-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .finalizar-compra-form button {
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #ffb347;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  
+  .finalizar-compra-form button:hover {
+    background-color: #ff9800;
+  }
+  
+  .finalizar-compra-gracias {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
